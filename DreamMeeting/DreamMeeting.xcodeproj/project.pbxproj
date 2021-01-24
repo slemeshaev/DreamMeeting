@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		661632B125BDC6AB002E119A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661632B025BDC6AB002E119A /* AppDelegate.swift */; };
 		661632B325BDC6AB002E119A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661632B225BDC6AB002E119A /* SceneDelegate.swift */; };
-		661632B525BDC6AB002E119A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661632B425BDC6AB002E119A /* ViewController.swift */; };
 		661632B825BDC6AB002E119A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661632B625BDC6AB002E119A /* Main.storyboard */; };
 		661632BA25BDC6AE002E119A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661632B925BDC6AE002E119A /* Assets.xcassets */; };
 		661632BD25BDC6AE002E119A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661632BB25BDC6AE002E119A /* LaunchScreen.storyboard */; };
+		661632D025BDC86D002E119A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661632CF25BDC86D002E119A /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		661632AD25BDC6AB002E119A /* DreamMeeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamMeeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661632B025BDC6AB002E119A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		661632B225BDC6AB002E119A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		661632B425BDC6AB002E119A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		661632B725BDC6AB002E119A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		661632B925BDC6AE002E119A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		661632BC25BDC6AE002E119A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		661632BE25BDC6AE002E119A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661632CF25BDC86D002E119A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,63 @@
 		661632AF25BDC6AB002E119A /* DreamMeeting */ = {
 			isa = PBXGroup;
 			children = (
+				661632CB25BDC7BA002E119A /* Model */,
+				661632CA25BDC7B4002E119A /* View */,
+				661632C825BDC7A7002E119A /* ViewModel */,
+				661632C725BDC79D002E119A /* Controllers */,
+				661632C625BDC78E002E119A /* API */,
+				661632C525BDC785002E119A /* Helpers */,
 				661632B025BDC6AB002E119A /* AppDelegate.swift */,
 				661632B225BDC6AB002E119A /* SceneDelegate.swift */,
-				661632B425BDC6AB002E119A /* ViewController.swift */,
 				661632B625BDC6AB002E119A /* Main.storyboard */,
 				661632B925BDC6AE002E119A /* Assets.xcassets */,
 				661632BB25BDC6AE002E119A /* LaunchScreen.storyboard */,
 				661632BE25BDC6AE002E119A /* Info.plist */,
 			);
 			path = DreamMeeting;
+			sourceTree = "<group>";
+		};
+		661632C525BDC785002E119A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		661632C625BDC78E002E119A /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		661632C725BDC79D002E119A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				661632CF25BDC86D002E119A /* HomeController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		661632C825BDC7A7002E119A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		661632CA25BDC7B4002E119A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		661632CB25BDC7BA002E119A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661632B525BDC6AB002E119A /* ViewController.swift in Sources */,
 				661632B125BDC6AB002E119A /* AppDelegate.swift in Sources */,
 				661632B325BDC6AB002E119A /* SceneDelegate.swift in Sources */,
+				661632D025BDC86D002E119A /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
 				INFOPLIST_FILE = DreamMeeting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.zamprog.DreamMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
 				INFOPLIST_FILE = DreamMeeting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.zamprog.DreamMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
