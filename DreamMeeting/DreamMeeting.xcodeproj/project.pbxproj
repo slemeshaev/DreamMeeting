@@ -14,6 +14,7 @@
 		661632BD25BDC6AE002E119A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661632BB25BDC6AE002E119A /* LaunchScreen.storyboard */; };
 		661632D025BDC86D002E119A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661632CF25BDC86D002E119A /* HomeController.swift */; };
 		66BAF0D425BEA37D00B380A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAF0D325BEA37D00B380A1 /* Extensions.swift */; };
+		66BAF0D725BEA6F100B380A1 /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		661632BE25BDC6AE002E119A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661632CF25BDC86D002E119A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		66BAF0D325BEA37D00B380A1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		661632CA25BDC7B4002E119A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				661632B125BDC6AB002E119A /* AppDelegate.swift in Sources */,
 				661632B325BDC6AB002E119A /* SceneDelegate.swift in Sources */,
+				66BAF0D725BEA6F100B380A1 /* HomeNavigationStackView.swift in Sources */,
 				661632D025BDC86D002E119A /* HomeController.swift in Sources */,
 				66BAF0D425BEA37D00B380A1 /* Extensions.swift in Sources */,
 			);
