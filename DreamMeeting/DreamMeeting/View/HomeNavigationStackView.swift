@@ -20,6 +20,9 @@ class HomeNavigationStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        settingsButton.setImage(#imageLiteral(resourceName: "top_left_profile").withRenderingMode(.alwaysOriginal), for: .normal)
+        messageButton.setImage(#imageLiteral(resourceName: "top_messages_icon").withRenderingMode(.alwaysOriginal), for: .normal)
+        
         let topNavigationBar = [settingsButton, UIView(),
                                 dreamMeetingIcon, UIView(),
                                 messageButton]
