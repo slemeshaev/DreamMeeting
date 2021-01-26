@@ -12,6 +12,14 @@ class HomeController: UIViewController {
     // MARK: - Properties
     
     private let topStackView = HomeNavigationStackView()
+    private let bottomStack = BottomControlsStackView()
+    
+    private let deckView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBlue
+        view.layer.cornerRadius = 5
+        return view
+    }()
     
     // MARK: - Lifecycle
     
@@ -24,9 +32,16 @@ class HomeController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .white
-        view.addSubview(topStackView)
-        topStackView.anchor(top: view.safeAreaLayoutGuide.topAnchor,
-                            left: view.leftAnchor, right: view.rightAnchor)
+        
+        let stackView = UIStackView(arrangedSubviews: [topStackView, deckView, bottomStack])
+        stackView.axis = .vertical
+        
+        view.addSubview(stackView)
+        stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
+                            bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor)
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = .init(top: 0, left: 12, bottom: 0, right: 12)
+        stackView.bringSubviewToFront(deckView)
     }
     
 }
