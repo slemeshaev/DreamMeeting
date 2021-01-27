@@ -16,6 +16,7 @@
 		665DE51D25BFEABF008353ED /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665DE51C25BFEABF008353ED /* BottomControlsStackView.swift */; };
 		66BAF0D425BEA37D00B380A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAF0D325BEA37D00B380A1 /* Extensions.swift */; };
 		66BAF0D725BEA6F100B380A1 /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */; };
+		66C1538D25C151D90029C2AC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1538C25C151D90029C2AC /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		665DE51C25BFEABF008353ED /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
 		66BAF0D325BEA37D00B380A1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
+		66C1538C25C151D90029C2AC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */,
 				665DE51C25BFEABF008353ED /* BottomControlsStackView.swift */,
+				66C1538C25C151D90029C2AC /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C1538D25C151D90029C2AC /* CardView.swift in Sources */,
 				665DE51D25BFEABF008353ED /* BottomControlsStackView.swift in Sources */,
 				661632B125BDC6AB002E119A /* AppDelegate.swift in Sources */,
 				661632B325BDC6AB002E119A /* SceneDelegate.swift in Sources */,
