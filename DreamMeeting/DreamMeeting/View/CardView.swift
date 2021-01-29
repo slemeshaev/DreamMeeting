@@ -64,6 +64,7 @@ class CardView: UIView {
     }
     
     override func layoutSubviews() {
+        //
         gradientLayer.frame = self.frame
     }
     
