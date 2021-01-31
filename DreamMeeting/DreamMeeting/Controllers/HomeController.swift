@@ -42,6 +42,7 @@ class HomeController: UIViewController {
         cardView2.fillSuperview()
     }
     
+    // конфигурация UI
     func configureUI() {
         view.backgroundColor = .white
         
