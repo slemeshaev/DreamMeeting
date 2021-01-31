@@ -30,7 +30,7 @@ class HomeController: UIViewController {
     }
     
     // MARK: - Helpers
-    
+    // конфигурация карточек
     func configureCards() {
         let cardView1 = CardView()
         let cardView2 = CardView()
@@ -42,6 +42,7 @@ class HomeController: UIViewController {
         cardView2.fillSuperview()
     }
     
+    // конфигурация UI
     func configureUI() {
         view.backgroundColor = .white
         
