@@ -30,7 +30,7 @@ class HomeController: UIViewController {
     }
     
     // MARK: - Helpers
-    
+    // конфигурация карточек
     func configureCards() {
         let cardView1 = CardView()
         let cardView2 = CardView()
