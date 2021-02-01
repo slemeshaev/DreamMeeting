@@ -75,18 +75,13 @@ class CardView: UIView {
     // MARK: - Selectors
     
     @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: nil)
-        
         switch sender.state {
         case .began:
             print("DEBUG: Pan did begin...")
         case .changed:
-            let degrees: CGFloat = translation.x / 20
-            let angle = degrees * .pi / 180
-            let rotationlTransform = CGAffineTransform(rotationAngle: angle)
-            self.transform = rotationlTransform.translatedBy(x: translation.x, y: translation.y)
+            panCard(sender: sender)
         case .ended:
-            print("DEBUG: Pan did ended...")
+            resetCardPosition(sender: sender)
         default: break
         }
     }
@@ -109,6 +104,24 @@ class CardView: UIView {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleChangePhoto))
         addGestureRecognizer(tap)
+    }
+    
+    func panCard(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: nil)
+        let degrees: CGFloat = translation.x / 20
+        let angle = degrees * .pi / 180
+        let rotationlTransform = CGAffineTransform(rotationAngle: angle)
+        self.transform = rotationlTransform.translatedBy(x: translation.x, y: translation.y)
+    }
+    
+    func resetCardPosition(sender: UIPanGestureRecognizer) {
+        UIView.animate(withDuration: 0.75,
+                       delay: 0,
+                       usingSpringWithDamping: 0.6,
+                       initialSpringVelocity: 0.1,
+                       options: .curveEaseOut,
+                       animations: { self.transform = .identity },
+                       completion: { _ in print("DEBUG: Animation did complete... ") })
     }
     
 }
