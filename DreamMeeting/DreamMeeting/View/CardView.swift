@@ -71,6 +71,16 @@ class CardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Selectors
+    
+    @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
+        //
+    }
+    
+    @objc func handleChangePhoto(sender: UITapGestureRecognizer) {
+        // 
+    }
+    
     // MARK: - Helpers
     
     func configureGradientLayer(gradientLayer: CAGradientLayer) {
@@ -78,4 +88,13 @@ class CardView: UIView {
         gradientLayer.locations = [0.5, 1.1]
         layer.addSublayer(gradientLayer)
     }
+    
+    func configureGestureRecognizers() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        addGestureRecognizer(pan)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleChangePhoto))
+        addGestureRecognizer(tap)
+    }
+    
 }
