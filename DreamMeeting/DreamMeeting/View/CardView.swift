@@ -61,6 +61,7 @@ class CardView: UIView {
         infoButton.centerY(inView: infoLabel)
         infoButton.anchor(right: rightAnchor, paddingRight: 16)
         
+        configureGestureRecognizers()
     }
     
     override func layoutSubviews() {
@@ -71,6 +72,29 @@ class CardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Selectors
+    
+    @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: nil)
+        
+        switch sender.state {
+        case .began:
+            print("DEBUG: Pan did begin...")
+        case .changed:
+            let degrees: CGFloat = translation.x / 20
+            let angle = degrees * .pi / 180
+            let rotationlTransform = CGAffineTransform(rotationAngle: angle)
+            self.transform = rotationlTransform.translatedBy(x: translation.x, y: translation.y)
+        case .ended:
+            print("DEBUG: Pan did ended...")
+        default: break
+        }
+    }
+    
+    @objc func handleChangePhoto(sender: UITapGestureRecognizer) {
+        print("Change photo...")
+    }
+    
     // MARK: - Helpers
     
     func configureGradientLayer(gradientLayer: CAGradientLayer) {
@@ -78,4 +102,13 @@ class CardView: UIView {
         gradientLayer.locations = [0.5, 1.1]
         layer.addSublayer(gradientLayer)
     }
+    
+    func configureGestureRecognizers() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        addGestureRecognizer(pan)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleChangePhoto))
+        addGestureRecognizer(tap)
+    }
+    
 }
