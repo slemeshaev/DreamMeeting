@@ -76,8 +76,19 @@ class CardView: UIView {
     
     @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: nil)
-        print("DEBUG: Translation x is \(translation.x)")
-        print("DEBUG: Translation y is \(translation.y)")
+        
+        switch sender.state {
+        case .began:
+            print("DEBUG: Pan did begin...")
+        case .changed:
+            let degrees: CGFloat = translation.x / 20
+            let angle = degrees * .pi / 180
+            let rotationlTransform = CGAffineTransform(rotationAngle: angle)
+            self.transform = rotationlTransform.translatedBy(x: translation.x, y: translation.y)
+        case .ended:
+            print("DEBUG: Pan did ended...")
+        default: break
+        }
     }
     
     @objc func handleChangePhoto(sender: UITapGestureRecognizer) {
