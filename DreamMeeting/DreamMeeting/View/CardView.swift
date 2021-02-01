@@ -61,6 +61,7 @@ class CardView: UIView {
         infoButton.centerY(inView: infoLabel)
         infoButton.anchor(right: rightAnchor, paddingRight: 16)
         
+        configureGestureRecognizers()
     }
     
     override func layoutSubviews() {
@@ -74,11 +75,13 @@ class CardView: UIView {
     // MARK: - Selectors
     
     @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
-        //
+        let translation = sender.translation(in: nil)
+        print("DEBUG: Translation x is \(translation.x)")
+        print("DEBUG: Translation y is \(translation.y)")
     }
     
     @objc func handleChangePhoto(sender: UITapGestureRecognizer) {
-        // 
+        print("Change photo...")
     }
     
     // MARK: - Helpers
