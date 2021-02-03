@@ -18,10 +18,11 @@ class CardView: UIView {
     
     private let gradientLayer = CAGradientLayer()
     
+    private let viewModel: CardViewModel
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.image = #imageLiteral(resourceName: "JadeWeber2")
         return imageView
     }()
     
@@ -46,8 +47,11 @@ class CardView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(viewModel: CardViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
+        
+        imageView.image = viewModel.user.images.first
         
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
