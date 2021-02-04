@@ -29,8 +29,6 @@ class CardView: UIView {
     private let infoLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        
-        label.attributedText = attributedText
         return label
     }()
     
