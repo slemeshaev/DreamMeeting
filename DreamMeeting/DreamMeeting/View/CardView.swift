@@ -26,9 +26,10 @@ class CardView: UIView {
         return imageView
     }()
     
-    private let infoLabel: UILabel = {
+    private lazy var infoLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
+        label.attributedText = viewModel.userInfoText
         return label
     }()
     
