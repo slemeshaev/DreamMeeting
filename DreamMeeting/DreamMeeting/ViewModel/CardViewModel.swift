@@ -12,6 +12,7 @@ struct CardViewModel {
     let user: User
     
     let userInfoText: NSAttributedString
+    private var imageIndex = 0
     
     init(user: User) {
         self.user = user
@@ -24,4 +25,11 @@ struct CardViewModel {
         self.userInfoText = attributedText
     }
     
+    func showNextPhoto() {
+        //
+    }
+    
+    func showPreviousPhoto() {
+        //
+    }
 }
