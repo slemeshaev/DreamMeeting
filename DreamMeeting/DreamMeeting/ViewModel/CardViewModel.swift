@@ -7,12 +7,14 @@
 
 import UIKit
 
-struct CardViewModel {
+class CardViewModel {
     
     let user: User
     
     let userInfoText: NSAttributedString
     private var imageIndex = 0
+    
+    var imageToShow: UIImage?
     
     init(user: User) {
         self.user = user
@@ -26,10 +28,12 @@ struct CardViewModel {
     }
     
     func showNextPhoto() {
-        print("DEBUG: Show next...")
+        imageIndex += 1
+        self.imageToShow = user.images[imageIndex]
     }
     
     func showPreviousPhoto() {
-        print("DEBUG: Show previos...")
+        imageIndex -= 1
+        self.imageToShow = user.images[imageIndex]
     }
 }
