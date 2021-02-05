@@ -26,10 +26,10 @@ struct CardViewModel {
     }
     
     func showNextPhoto() {
-        //
+        print("DEBUG: Show next...")
     }
     
     func showPreviousPhoto() {
-        //
+        print("DEBUG: Show previos...")
     }
 }
