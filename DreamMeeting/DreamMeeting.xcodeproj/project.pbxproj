@@ -72,14 +72,14 @@
 		661632AF25BDC6AB002E119A /* DreamMeeting */ = {
 			isa = PBXGroup;
 			children = (
+				661632B025BDC6AB002E119A /* AppDelegate.swift */,
+				661632B225BDC6AB002E119A /* SceneDelegate.swift */,
 				661632CB25BDC7BA002E119A /* Model */,
 				661632CA25BDC7B4002E119A /* View */,
 				661632C825BDC7A7002E119A /* ViewModel */,
 				661632C725BDC79D002E119A /* Controller */,
 				661632C625BDC78E002E119A /* API */,
 				661632C525BDC785002E119A /* Helpers */,
-				661632B025BDC6AB002E119A /* AppDelegate.swift */,
-				661632B225BDC6AB002E119A /* SceneDelegate.swift */,
 				661632B625BDC6AB002E119A /* Main.storyboard */,
 				661632B925BDC6AE002E119A /* Assets.xcassets */,
 				661632BB25BDC6AE002E119A /* LaunchScreen.storyboard */,
