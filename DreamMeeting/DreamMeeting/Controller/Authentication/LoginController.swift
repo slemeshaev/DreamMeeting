@@ -18,6 +18,11 @@ class LoginController: UIViewController {
         return imageView
     }()
     
+    private let emailTextField: UITextField = {
+        let textField = UITextField()
+        return textField
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -29,13 +34,15 @@ class LoginController: UIViewController {
     
     func configureUI() {
         navigationController?.navigationBar.isHidden = true
-        view.backgroundColor = .systemPink
+        navigationController?.navigationBar.barStyle = .black
+        
+        configureGradientLayer()
         
         view.addSubview(iconImageView)
         
         iconImageView.centerX(inView: view)
         iconImageView.setDimensions(height: 100, width: 100)
-        iconImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 8)
+        iconImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
     }
     
 }
