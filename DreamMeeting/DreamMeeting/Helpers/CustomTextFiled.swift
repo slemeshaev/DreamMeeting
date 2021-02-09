@@ -7,4 +7,6 @@
 
 import UIKit
 
-class CustomTextFiled: UITextField {}
+class CustomTextFiled: UITextField {
+    //
+}
