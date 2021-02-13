@@ -31,7 +31,7 @@ class HomeController: UIViewController {
     
     // MARK: - Helpers
     
-    func configureCards() {
+    private func configureCards() {
         let user1 = User(name: "Jane Doe", age: 22, images: [#imageLiteral(resourceName: "JadeWeber2"), #imageLiteral(resourceName: "lady4c")])
         let user2 = User(name: "Megan", age: 21, images: [#imageLiteral(resourceName: "kelly3"),#imageLiteral(resourceName: "kelly2")])
         
@@ -46,7 +46,7 @@ class HomeController: UIViewController {
         cardView2.fillSuperview()
     }
     
-    func configureUI() {
+    private func configureUI() {
         view.backgroundColor = .white
         
         let stackView = UIStackView(arrangedSubviews: [topStackView, deckView, bottomStack])
