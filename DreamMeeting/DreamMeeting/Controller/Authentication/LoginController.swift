@@ -19,12 +19,7 @@ class LoginController: UIViewController {
     }()
     
     private let emailTextField = CustomTextFiled(placeholder: "Email")
-    
-    private let passwordTextField: UITextField = {
-        let textField = CustomTextFiled(placeholder: "Password")
-        textField.isSecureTextEntry = true
-        return textField
-    }()
+    private let passwordTextField = CustomTextFiled(placeholder: "Password", isSecureText: true)
     
     // MARK: - Lifecycle
     
