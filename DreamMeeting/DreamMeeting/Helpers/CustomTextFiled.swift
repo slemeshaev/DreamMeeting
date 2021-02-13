@@ -21,7 +21,7 @@ class CustomTextFiled: UITextField {
         backgroundColor = UIColor(white: 1, alpha: 0.2)
         heightAnchor.constraint(equalToConstant: 50).isActive = true
         layer.cornerRadius = 5
-        attributedPlaceholder = NSAttributedString(string: "Email",
+        attributedPlaceholder = NSAttributedString(string: placeholder,
                                                    attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
     }
     

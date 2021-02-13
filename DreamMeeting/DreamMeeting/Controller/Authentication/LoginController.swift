@@ -18,26 +18,11 @@ class LoginController: UIViewController {
         return imageView
     }()
     
-    private let emailTextField: UITextField = {
-        let textField = UITextField()
-        return textField
-    }()
+    private let emailTextField = CustomTextFiled(placeholder: "Email")
     
     private let passwordTextField: UITextField = {
-        let textField = UITextField()
-        
-        let spacer = UIView()
-        spacer.setDimensions(height: 50, width: 12)
-        textField.leftView = spacer
-        textField.leftViewMode = .always
-        
-        textField.borderStyle = .none
-        textField.textColor = .white
-        textField.backgroundColor = UIColor(white: 1, alpha: 0.2)
-        textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        textField.layer.cornerRadius = 5
-        textField.attributedPlaceholder = NSAttributedString(string: "Пароль",
-                                                             attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        let textField = CustomTextFiled(placeholder: "Password")
+        textField.isSecureTextEntry = true
         return textField
     }()
     
