@@ -9,8 +9,24 @@ import UIKit
 
 class CustomTextFiled: UITextField {
     
-    init(placeholder: String) {
+    init(placeholder: String, isSecureText: Bool? = false) {
         super.init(frame: .zero)
+        let spacer = UIView()
+        spacer.setDimensions(height: 50, width: 12)
+        leftView = spacer
+        leftViewMode = .always
+        
+        keyboardAppearance = .dark
+        borderStyle = .none
+        textColor = .white
+        backgroundColor = UIColor(white: 1, alpha: 0.2)
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
+        layer.cornerRadius = 5
+        attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                   attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        if let isSecureText = isSecureText {
+            isSecureTextEntry = isSecureText
+        }
     }
     
     required init?(coder: NSCoder) {
