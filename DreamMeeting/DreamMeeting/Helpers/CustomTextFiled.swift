@@ -16,6 +16,7 @@ class CustomTextFiled: UITextField {
         leftView = spacer
         leftViewMode = .always
         
+        keyboardAppearance = .dark
         borderStyle = .none
         textColor = .white
         backgroundColor = UIColor(white: 1, alpha: 0.2)
