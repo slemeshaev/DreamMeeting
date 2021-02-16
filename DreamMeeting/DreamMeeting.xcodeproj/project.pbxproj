@@ -15,7 +15,7 @@
 		661632BD25BDC6AE002E119A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661632BB25BDC6AE002E119A /* LaunchScreen.storyboard */; };
 		661632D025BDC86D002E119A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661632CF25BDC86D002E119A /* HomeController.swift */; };
 		661C0CFB25CE5584001A68D4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C0CFA25CE5584001A68D4 /* LoginController.swift */; };
-		661C0CFE25CE559A001A68D4 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C0CFD25CE559A001A68D4 /* RegistrationController.swift */; };
+		661C0CFE25CE559A001A68D4 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C0CFD25CE559A001A68D4 /* SignUpController.swift */; };
 		665DE51D25BFEABF008353ED /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665DE51C25BFEABF008353ED /* BottomControlsStackView.swift */; };
 		6667782525CA784100C167D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667782425CA784100C167D9 /* User.swift */; };
 		6667782825CA7A1100C167D9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667782725CA7A1100C167D9 /* CardViewModel.swift */; };
@@ -36,7 +36,7 @@
 		661632BE25BDC6AE002E119A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661632CF25BDC86D002E119A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		661C0CFA25CE5584001A68D4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		661C0CFD25CE559A001A68D4 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		661C0CFD25CE559A001A68D4 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		665DE51C25BFEABF008353ED /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
 		6667782425CA784100C167D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6667782725CA7A1100C167D9 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				661C0CFA25CE5584001A68D4 /* LoginController.swift */,
-				661C0CFD25CE559A001A68D4 /* RegistrationController.swift */,
+				661C0CFD25CE559A001A68D4 /* SignUpController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				661632B325BDC6AB002E119A /* SceneDelegate.swift in Sources */,
 				6667782525CA784100C167D9 /* User.swift in Sources */,
 				66BAF0D725BEA6F100B380A1 /* HomeNavigationStackView.swift in Sources */,
-				661C0CFE25CE559A001A68D4 /* RegistrationController.swift in Sources */,
+				661C0CFE25CE559A001A68D4 /* SignUpController.swift in Sources */,
 				661632D025BDC86D002E119A /* HomeController.swift in Sources */,
 				66BAF0D425BEA37D00B380A1 /* Extensions.swift in Sources */,
 				6667782825CA7A1100C167D9 /* CardViewModel.swift in Sources */,
