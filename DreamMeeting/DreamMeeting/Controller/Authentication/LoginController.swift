@@ -27,6 +27,18 @@ class LoginController: UIViewController {
         return button
     }()
     
+    private let goToRegistrationButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedTitle = NSMutableAttributedString(string: "У вас еще нет учетной записи?  ",
+                                                 attributes: [.foregroundColor: UIColor.white])
+        attributedTitle.append(NSAttributedString(string: "Войти",
+                                                  attributes: [.foregroundColor: UIColor.white,
+                                                               .font: UIFont.boldSystemFont(ofSize: 16)]))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.addTarget(self, action: #selector(handleSingUp), for: .touchUpInside)
+        return button
+    }()
+    
     
     // MARK: - Lifecycle
     
@@ -38,6 +50,10 @@ class LoginController: UIViewController {
     // MARK: - Actions
     
     @objc func handleLogin() {
+        print(#function)
+    }
+    
+    @objc func handleSingUp() {
         print(#function)
     }
     
