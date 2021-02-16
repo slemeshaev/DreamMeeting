@@ -19,13 +19,26 @@ class LoginController: UIViewController {
     }()
     
     private let emailTextField = CustomTextFiled(placeholder: "Email")
-    private let passwordTextField = CustomTextFiled(placeholder: "Password", isSecureText: true)
+    private let passwordTextField = CustomTextFiled(placeholder: "Password",
+                                                    isSecureText: true)
+    private let authButton: AuthButton = {
+        let button = AuthButton(title: "Войти", type: .system)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        return button
+    }()
+    
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+    }
+    
+    // MARK: - Actions
+    
+    @objc func handleLogin() {
+        print(#function)
     }
     
     // MARK: - Helpers
