@@ -55,7 +55,7 @@ class LoginController: UIViewController {
     }
     
     @objc func handleSingUp() {
-        navigationController?.pushViewController(RegistrationController(), animated: true)
+        navigationController?.pushViewController(SignUpController(), animated: true)
     }
     
     // MARK: - Helpers
