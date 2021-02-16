@@ -13,6 +13,7 @@ class AuthButton: UIButton {
         super.init(frame: .zero)
         
         setTitle(title, for: .normal)
+        backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
     }
     
     required init?(coder: NSCoder) {
