@@ -55,7 +55,7 @@ class LoginController: UIViewController {
         iconImageView.setDimensions(height: 100, width: 100)
         iconImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         
-        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField])
+        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, authButton])
         stackView.axis = .vertical
         stackView.spacing = 16
         
