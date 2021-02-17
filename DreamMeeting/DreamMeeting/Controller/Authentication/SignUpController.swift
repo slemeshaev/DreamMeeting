@@ -29,6 +29,19 @@ class SignUpController: UIViewController {
         return button
     }()
     
+    private let alreadyHaveAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedTitle = NSMutableAttributedString(string: "У вас уже есть аккаунт?  ",
+                                                        attributes: [.foregroundColor: UIColor.white,
+                                                                     .font: UIFont.systemFont(ofSize: 16)])
+        attributedTitle.append(NSAttributedString(string: "Войти",
+                                                  attributes: [.foregroundColor: UIColor.white,
+                                                               .font: UIFont.boldSystemFont(ofSize: 16)]))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.addTarget(self, action: #selector(goToSignIn), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -44,6 +57,10 @@ class SignUpController: UIViewController {
     
     @objc func handleSignUp() {
         print(#function)
+    }
+    
+    @objc func goToSignIn() {
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Helpers
@@ -65,9 +82,17 @@ class SignUpController: UIViewController {
         stackView.anchor(top: selectPhotoButton.bottomAnchor,
                          left: view.leftAnchor,
                          right: view.rightAnchor,
-                         paddingTop: 24,
+                         paddingTop: 16,
                          paddingLeft: 32,
                          paddingRight: 32)
+        
+        view.addSubview(alreadyHaveAccountButton)
+        alreadyHaveAccountButton.anchor(left: view.leftAnchor,
+                                     bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                     right: view.rightAnchor,
+                                     paddingLeft: 32,
+                                     paddingBottom: 16,
+                                     paddingRight: 32)
     }
     
     
