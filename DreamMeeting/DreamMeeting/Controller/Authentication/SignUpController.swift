@@ -36,6 +36,11 @@ class SignUpController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .systemPurple
+        
+        view.addSubview(selectPhotoButton)
+        selectPhotoButton.setDimensions(height: 275, width: 275)
+        selectPhotoButton.centerX(inView: view)
+        selectPhotoButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 8)
     }
     
     
