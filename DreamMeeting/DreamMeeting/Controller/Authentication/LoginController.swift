@@ -29,14 +29,14 @@ class LoginController: UIViewController {
     
     private let dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
-        let attributedTitle = NSMutableAttributedString(string: "У вас еще нет учетной записи?  ",
+        let attributedTitle = NSMutableAttributedString(string: "У вас еще нет учетной записи? ",
                                                         attributes: [.foregroundColor: UIColor.white,
                                                                      .font: UIFont.systemFont(ofSize: 16)])
         attributedTitle.append(NSAttributedString(string: "Войти",
                                                   attributes: [.foregroundColor: UIColor.white,
                                                                .font: UIFont.boldSystemFont(ofSize: 16)]))
         button.setAttributedTitle(attributedTitle, for: .normal)
-        button.addTarget(self, action: #selector(handleSingUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(goToSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -54,7 +54,7 @@ class LoginController: UIViewController {
         print(#function)
     }
     
-    @objc func handleSingUp() {
+    @objc func goToSignUp() {
         navigationController?.pushViewController(SignUpController(), animated: true)
     }
     
