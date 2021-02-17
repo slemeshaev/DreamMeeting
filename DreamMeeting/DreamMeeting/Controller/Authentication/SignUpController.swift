@@ -11,11 +11,14 @@ class SignUpController: UIViewController {
     
     // MARK: - Properties
     
+    private var signUpViewModel = SignUpViewModel()
+    
     private let selectPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
+        button.clipsToBounds = true
         return button
     }()
     
@@ -47,12 +50,15 @@ class SignUpController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureTextFieldObservers()
     }
     
     // MARK: - Actions
     
     @objc func handleSelectPhoto() {
-        print(#function)
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
     }
     
     @objc func handleSignUp() {
@@ -63,9 +69,29 @@ class SignUpController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func textDidChanged(sender: UITextField) {
+        if sender == emailTextField {
+            signUpViewModel.email = sender.text
+        } else if sender == fullNameTextField {
+            signUpViewModel.fullName = sender.text
+        } else {
+            signUpViewModel.password = sender.text
+        }
+    }
+    
     // MARK: - Helpers
     
-    func configureUI() {
+    private func checkFormStatus() {
+        if signUpViewModel.formIsValid {
+            authButton.isEnabled = true
+            authButton.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        } else {
+            authButton.isEnabled = false
+            authButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        }
+    }
+    
+    private func configureUI() {
         configureGradientLayer()
         
         view.addSubview(selectPhotoButton)
@@ -95,5 +121,31 @@ class SignUpController: UIViewController {
                                      paddingRight: 32)
     }
     
+    private func configureTextFieldObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChanged), for: .editingChanged)
+        fullNameTextField.addTarget(self, action: #selector(textDidChanged), for: .editingChanged)
+    }
     
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension SignUpController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as? UIImage
+        selectPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        selectPhotoButton.layer.borderColor = UIColor(white: 1, alpha: 0.7).cgColor
+        selectPhotoButton.layer.borderWidth = 3
+        selectPhotoButton.layer.cornerRadius = 10
+        selectPhotoButton.imageView?.contentMode = .scaleAspectFill
+        
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - UINavigationControllerDelegate
+
+extension SignUpController: UINavigationControllerDelegate {
+    //
 }
