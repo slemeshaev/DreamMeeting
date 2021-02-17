@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct LoginViewModel {
+    let email: String?
+    let password: String?
+}
+
+struct SignUpViewModel {
+    //
+}

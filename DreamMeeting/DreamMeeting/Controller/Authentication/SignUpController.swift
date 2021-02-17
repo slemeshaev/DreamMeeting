@@ -16,6 +16,7 @@ class SignUpController: UIViewController {
         button.tintColor = .white
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
+        button.clipsToBounds = true
         return button
     }()
     
