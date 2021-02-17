@@ -52,7 +52,9 @@ class SignUpController: UIViewController {
     // MARK: - Actions
     
     @objc func handleSelectPhoto() {
-        print(#function)
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
     }
     
     @objc func handleSignUp() {
@@ -95,5 +97,16 @@ class SignUpController: UIViewController {
                                      paddingRight: 32)
     }
     
-    
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension SignUpController: UIImagePickerControllerDelegate {
+    //
+}
+
+// MARK: - UINavigationControllerDelegate
+
+extension SignUpController: UINavigationControllerDelegate {
+    //
 }
