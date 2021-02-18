@@ -104,13 +104,13 @@ class CardView: UIView {
     
     // MARK: - Helpers
     
-    func configureGradientLayer(gradientLayer: CAGradientLayer) {
+    private func configureGradientLayer(gradientLayer: CAGradientLayer) {
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradientLayer.locations = [0.5, 1.1]
         layer.addSublayer(gradientLayer)
     }
     
-    func configureGestureRecognizers() {
+    private func configureGestureRecognizers() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
         addGestureRecognizer(pan)
         
@@ -118,7 +118,7 @@ class CardView: UIView {
         addGestureRecognizer(tap)
     }
     
-    func panCard(sender: UIPanGestureRecognizer) {
+    private func panCard(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: nil)
         let degrees: CGFloat = translation.x / 20
         let angle = degrees * .pi / 180
@@ -126,7 +126,7 @@ class CardView: UIView {
         self.transform = rotationlTransform.translatedBy(x: translation.x, y: translation.y)
     }
     
-    func resetCardPosition(sender: UIPanGestureRecognizer) {
+    private func resetCardPosition(sender: UIPanGestureRecognizer) {
         let direction: SwipeDirection = sender.translation(in: nil).x > 100 ? .right : .left
         let shouldDissmissCard = abs(sender.translation(in: nil).x) > 100
         
