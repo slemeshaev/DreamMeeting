@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		6687674925DBC36A008469F1 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6687674825DBC36A008469F1 /* AuthButton.swift */; };
 		66BAF0D725BEA6F100B380A1 /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */; };
 		66C1538D25C151D90029C2AC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1538C25C151D90029C2AC /* CardView.swift */; };
+		D67D3052AC79A82E627DF32D /* Pods_DreamMeeting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E12A2422C8997BAB4B55B97 /* Pods_DreamMeeting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,9 @@
 		6687674825DBC36A008469F1 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
 		66C1538C25C151D90029C2AC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8E12A2422C8997BAB4B55B97 /* Pods_DreamMeeting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamMeeting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99DEB337828B2462E1CC10C /* Pods-DreamMeeting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMeeting.release.xcconfig"; path = "Target Support Files/Pods-DreamMeeting/Pods-DreamMeeting.release.xcconfig"; sourceTree = "<group>"; };
+		F96B16AF8F396CBE3A5315FF /* Pods-DreamMeeting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMeeting.debug.xcconfig"; path = "Target Support Files/Pods-DreamMeeting/Pods-DreamMeeting.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67D3052AC79A82E627DF32D /* Pods_DreamMeeting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,18 +83,8 @@
 		660248D425F7A353002CF723 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				660248D525F7A35D002CF723 /* Delegates */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		660248D525F7A35D002CF723 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				661632B025BDC6AB002E119A /* AppDelegate.swift */,
-				661632B225BDC6AB002E119A /* SceneDelegate.swift */,
-			);
-			path = Delegates;
 			sourceTree = "<group>";
 		};
 		660248E125F7A436002CF723 /* Subclasses */ = {
@@ -104,6 +99,8 @@
 		660248E625F7AA7F002CF723 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				661632B025BDC6AB002E119A /* AppDelegate.swift */,
+				661632B225BDC6AB002E119A /* SceneDelegate.swift */,
 				660248EB25F7B43A002CF723 /* GoogleService-Info.plist */,
 				661632B925BDC6AE002E119A /* Assets.xcassets */,
 				661632BE25BDC6AE002E119A /* Info.plist */,
@@ -123,6 +120,8 @@
 			children = (
 				661632AF25BDC6AB002E119A /* DreamMeeting */,
 				661632AE25BDC6AB002E119A /* Products */,
+				AF83D804CBCDA16CD481A118 /* Pods */,
+				DAA574CB1031A1B2D2C6F31A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +212,23 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		AF83D804CBCDA16CD481A118 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F96B16AF8F396CBE3A5315FF /* Pods-DreamMeeting.debug.xcconfig */,
+				A99DEB337828B2462E1CC10C /* Pods-DreamMeeting.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DAA574CB1031A1B2D2C6F31A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E12A2422C8997BAB4B55B97 /* Pods_DreamMeeting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 661632C125BDC6AE002E119A /* Build configuration list for PBXNativeTarget "DreamMeeting" */;
 			buildPhases = (
+				41A06E5DCD335929D1895B59 /* [CP] Check Pods Manifest.lock */,
 				661632A925BDC6AB002E119A /* Sources */,
 				661632AA25BDC6AB002E119A /* Frameworks */,
 				661632AB25BDC6AB002E119A /* Resources */,
+				03C331C715ABB9D800BD9C45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,6 +296,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03C331C715ABB9D800BD9C45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamMeeting/Pods-DreamMeeting-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamMeeting/Pods-DreamMeeting-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DreamMeeting/Pods-DreamMeeting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41A06E5DCD335929D1895B59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamMeeting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		661632A925BDC6AB002E119A /* Sources */ = {
@@ -443,6 +503,7 @@
 		};
 		661632C225BDC6AE002E119A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F96B16AF8F396CBE3A5315FF /* Pods-DreamMeeting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +524,7 @@
 		};
 		661632C325BDC6AE002E119A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A99DEB337828B2462E1CC10C /* Pods-DreamMeeting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
