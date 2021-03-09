@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>347474149529-t5gnehe9alvof6k0vi8i3ql7vv1ed1rg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.347474149529-t5gnehe9alvof6k0vi8i3ql7vv1ed1rg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCGJDkuVjkYeBenXodxUM_bqvEUvn6h2cQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>347474149529</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ru.zamprog.DreamMeeting</string>
+	<key>PROJECT_ID</key>
+	<string>dreammeeting-cedb4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dreammeeting-cedb4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:347474149529:ios:94c32f24cbe2d4ce3d7808</string>
+</dict>
+</plist>
