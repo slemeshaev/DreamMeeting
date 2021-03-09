@@ -5,11 +5,11 @@
       "scale" : "1x"
     },
     {
+      "filename" : "DreamMeetingIcon.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "app_icon.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
