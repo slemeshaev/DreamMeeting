@@ -27,6 +27,8 @@
 		6687674925DBC36A008469F1 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6687674825DBC36A008469F1 /* AuthButton.swift */; };
 		66BAF0D725BEA6F100B380A1 /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */; };
 		66C1538D25C151D90029C2AC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1538C25C151D90029C2AC /* CardView.swift */; };
+		66EF0AF525F8FDB600CAFD26 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF0AF425F8FDB600CAFD26 /* AuthService.swift */; };
+		66EF0AF825F8FDD300CAFD26 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF0AF725F8FDD300CAFD26 /* Service.swift */; };
 		D67D3052AC79A82E627DF32D /* Pods_DreamMeeting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E12A2422C8997BAB4B55B97 /* Pods_DreamMeeting.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		6687674825DBC36A008469F1 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		66BAF0D625BEA6F000B380A1 /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
 		66C1538C25C151D90029C2AC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		66EF0AF425F8FDB600CAFD26 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		66EF0AF725F8FDD300CAFD26 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8E12A2422C8997BAB4B55B97 /* Pods_DreamMeeting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamMeeting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99DEB337828B2462E1CC10C /* Pods-DreamMeeting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMeeting.release.xcconfig"; path = "Target Support Files/Pods-DreamMeeting/Pods-DreamMeeting.release.xcconfig"; sourceTree = "<group>"; };
 		F96B16AF8F396CBE3A5315FF /* Pods-DreamMeeting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMeeting.debug.xcconfig"; path = "Target Support Files/Pods-DreamMeeting/Pods-DreamMeeting.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 		661632C625BDC78E002E119A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				66EF0AF425F8FDB600CAFD26 /* AuthService.swift */,
+				66EF0AF725F8FDD300CAFD26 /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				6624BAB325DD71CE005E3538 /* AuthenticationViewModel.swift in Sources */,
 				66C1538D25C151D90029C2AC /* CardView.swift in Sources */,
 				665DE51D25BFEABF008353ED /* BottomControlsStackView.swift in Sources */,
+				66EF0AF825F8FDD300CAFD26 /* Service.swift in Sources */,
 				660248DB25F7A3B2002CF723 /* UIColor.swift in Sources */,
 				661632B125BDC6AB002E119A /* AppDelegate.swift in Sources */,
 				661632B325BDC6AB002E119A /* SceneDelegate.swift in Sources */,
@@ -358,6 +365,7 @@
 				661632D025BDC86D002E119A /* HomeController.swift in Sources */,
 				660248DE25F7A3D3002CF723 /* UIView.swift in Sources */,
 				6667782825CA7A1100C167D9 /* CardViewModel.swift in Sources */,
+				66EF0AF525F8FDB600CAFD26 /* AuthService.swift in Sources */,
 				661C0CFB25CE5584001A68D4 /* LoginController.swift in Sources */,
 				660248D825F7A395002CF723 /* UIViewController.swift in Sources */,
 			);
