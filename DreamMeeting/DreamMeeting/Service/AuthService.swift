@@ -8,6 +8,9 @@
 import UIKit
 
 struct AuthService {
-    //
+    
+    static func registerUser() {
+        print("DEBUG: Register user with firebase here...")
+    }
 }
 
