@@ -28,7 +28,7 @@ class SignUpController: UIViewController {
                                                     isSecureText: true)
     private let authButton: AuthButton = {
         let button = AuthButton(title: "Зарегистрироваться", type: .system)
-        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleSignUpUser), for: .touchUpInside)
         return button
     }()
     
@@ -61,8 +61,8 @@ class SignUpController: UIViewController {
         present(picker, animated: true, completion: nil)
     }
     
-    @objc func handleSignUp() {
-        print(#function)
+    @objc func handleSignUpUser() {
+        AuthService.registerUser()
     }
     
     @objc func goToSignIn() {
