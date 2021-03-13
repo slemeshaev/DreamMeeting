@@ -7,9 +7,16 @@
 
 import UIKit
 
+struct AuthCredentials {
+    let profileImage: UIImage
+    let email: String
+    let password: String
+    let fullName: String
+}
+
 struct AuthService {
     
-    static func registerUser() {
+    static func registerUser(withCredentials credentials: AuthCredentials) {
         print("DEBUG: Register user with firebase here...")
     }
 }
