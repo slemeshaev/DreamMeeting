@@ -62,7 +62,10 @@ class SignUpController: UIViewController {
     }
     
     @objc func handleSignUpUser() {
-        AuthService.registerUser()
+        guard let email = emailTextField.text else { return }
+        guard let fullName = fullNameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        AuthService.registerUser(withCredentials: <#AuthCredentials#>)
     }
     
     @objc func goToSignIn() {
