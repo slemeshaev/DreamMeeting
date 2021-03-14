@@ -72,7 +72,14 @@ class SignUpController: UIViewController {
                                           email: email,
                                           password: password,
                                           fullName: fullName)
-        AuthService.registerUser(withCredentials: credentials)
+        AuthService.registerUser(withCredentials: credentials) { error in
+            if let error = error {
+                print("DEBUG: Error signing user up \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successfully registered user...")
+        }
     }
     
     @objc func goToSignIn() {
