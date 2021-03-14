@@ -18,7 +18,9 @@ struct AuthCredentials {
 struct AuthService {
     
     static func registerUser(withCredentials credentials: AuthCredentials) {
-        print("DEBUG: Register user with firebase here...")
+        NetworkService.uploadImage(image: credentials.profileImage) { imageUrl in
+            //
+        }
     }
 }
 
