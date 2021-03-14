@@ -22,6 +22,7 @@ class SignUpController: UIViewController {
         return button
     }()
     
+    private var profileImage: UIImage?
     private let emailTextField = CustomTextFiled(placeholder: "Email")
     private let fullNameTextField = CustomTextFiled(placeholder: "Полное имя")
     private let passwordTextField = CustomTextFiled(placeholder: "Пароль",
@@ -62,10 +63,23 @@ class SignUpController: UIViewController {
     }
     
     @objc func handleSignUpUser() {
+        guard let profileImage = self.profileImage else { return }
         guard let email = emailTextField.text else { return }
         guard let fullName = fullNameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        AuthService.registerUser(withCredentials: <#AuthCredentials#>)
+        
+        let credentials = AuthCredentials(profileImage: profileImage,
+                                          email: email,
+                                          password: password,
+                                          fullName: fullName)
+        AuthService.registerUser(withCredentials: credentials) { error in
+            if let error = error {
+                print("DEBUG: Error signing user up \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successfully registered user...")
+        }
     }
     
     @objc func goToSignIn() {
@@ -137,6 +151,7 @@ class SignUpController: UIViewController {
 extension SignUpController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as? UIImage
+        profileImage = image
         selectPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
         selectPhotoButton.layer.borderColor = UIColor(white: 1, alpha: 0.7).cgColor
         selectPhotoButton.layer.borderWidth = 3
