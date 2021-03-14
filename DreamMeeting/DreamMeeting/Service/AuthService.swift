@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 struct AuthCredentials {
     let profileImage: UIImage
