@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>347474149529-t5gnehe9alvof6k0vi8i3ql7vv1ed1rg.apps.googleusercontent.com</string>
+	<string>660432088391-2sbv2bopdtt6ulrg9beumqml5nkrn7uc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.347474149529-t5gnehe9alvof6k0vi8i3ql7vv1ed1rg</string>
+	<string>com.googleusercontent.apps.660432088391-2sbv2bopdtt6ulrg9beumqml5nkrn7uc</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCGJDkuVjkYeBenXodxUM_bqvEUvn6h2cQ</string>
+	<string>AIzaSyAi74eAxl5RQITdZ-3kbETz7pDjr-0LmNw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>347474149529</string>
+	<string>660432088391</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>ru.zamprog.DreamMeeting</string>
 	<key>PROJECT_ID</key>
-	<string>dreammeeting-cedb4</string>
+	<string>dreammeeting-a3bef</string>
 	<key>STORAGE_BUCKET</key>
-	<string>dreammeeting-cedb4.appspot.com</string>
+	<string>dreammeeting-a3bef.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:347474149529:ios:94c32f24cbe2d4ce3d7808</string>
+	<string>1:660432088391:ios:243a2c928ebafcea94b062</string>
 </dict>
 </plist>

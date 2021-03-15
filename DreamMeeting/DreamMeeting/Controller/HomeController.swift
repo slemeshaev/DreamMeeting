@@ -28,6 +28,8 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         configureUI()
         configureCards()
+        checkIfUserIsLoggedIn()
+        logout()
     }
     
     // MARK: - API
@@ -37,6 +39,15 @@ class HomeController: UIViewController {
             print("DEBUG: User not logged in...")
         } else {
             print("DEBUG: User is logged in...")
+        }
+    }
+    
+    private func logout() {
+        do {
+            try Auth.auth().signOut()
+            print("DEBUG: Present login controller here")
+        } catch {
+            print("DEBUG: Failed to sign out...")
         }
     }
     
