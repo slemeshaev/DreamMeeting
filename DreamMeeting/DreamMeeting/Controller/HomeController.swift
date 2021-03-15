@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeController: UIViewController {
     
@@ -27,6 +28,16 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         configureUI()
         configureCards()
+    }
+    
+    // MARK: - API
+    
+    private func checkIfUserIsLoggedIn() {
+        if Auth.auth().currentUser == nil {
+            print("DEBUG: User not logged in...")
+        } else {
+            print("DEBUG: User is logged in...")
+        }
     }
     
     // MARK: - Helpers
