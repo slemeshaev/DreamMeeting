@@ -24,7 +24,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Stanislav Lemeshaev" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY0-N6-cYE">
-                                <rect key="frame" x="20" y="838" width="374" height="24"/>
+                                <rect key="frame" x="65" y="832" width="284.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -34,11 +34,11 @@
                         <color key="backgroundColor" red="0.9906401038" green="0.31374558809999997" blue="0.36665028329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ku0-Wz-Ly8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7iE-Jd-hdT"/>
-                            <constraint firstItem="SY0-N6-cYE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HPQ-2x-R71"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="SY0-N6-cYE" secondAttribute="trailing" constant="20" id="Pob-if-0wP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SY0-N6-cYE" secondAttribute="trailing" constant="20" id="Pob-if-0wP"/>
+                            <constraint firstAttribute="bottom" secondItem="SY0-N6-cYE" secondAttribute="bottom" constant="40" id="QYq-HN-PC9"/>
                             <constraint firstItem="SY0-N6-cYE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bX5-Qf-XFQ"/>
                             <constraint firstItem="ku0-Wz-Ly8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="m7B-at-d9B"/>
-                            <constraint firstItem="SY0-N6-cYE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="o8W-fG-QOa"/>
+                            <constraint firstItem="SY0-N6-cYE" firstAttribute="centerXWithinMargins" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o8W-fG-QOa"/>
                         </constraints>
                     </view>
                 </viewController>
