@@ -84,13 +84,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		660248D425F7A353002CF723 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		660248E125F7A436002CF723 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +146,6 @@
 		661632C525BDC785002E119A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				660248D425F7A353002CF723 /* Protocols */,
 				660248D325F7A344002CF723 /* Extensions */,
 				660248E725F7AABD002CF723 /* Screenshots */,
 				660248E125F7A436002CF723 /* Subclasses */,
